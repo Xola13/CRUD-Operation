@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>CRUD Operations</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Online Store</h1>
+  <form action="javascript:void(0);" onsubmit="searchbar()"> 
+    <input type="text" id="search" placeholder="Search for a product" required>
+    <input type="submit" value="Search">
+    <input type="submit" value="Reset" onclick="location.reload()">
+  </form>
+  <p></p>
+  <div>Add another product:</div> 
+  <form action="javascript:void(0);" onsubmit="addProduct()"> 
+    <input type="text" id="add-product" placeholder="Add new product" required>
+    <!-- <input type="" id="add-category" placeholder="Add new category" required> -->
+    <select name="subject" id="add-category">
+            <option value="" selected="selected">Category</option>
+          </select>
+    <input type="text" id="add-price" placeholder="Add new price" required>
+    <input type="submit" value="Add">
+  </form>
+
+  <div id="editForm">
+    <form action="javascript:void(0);" id="saveEdit">
+      <input type="text" id="edit-product">
+      <input type="text" id="edit-category">
+      <input type="text" id="edit-price">
+      <input type="submit" value="Edit" /> <a onclick="closeInput()" aria-label="Close">&#10006;</a>
+    </form>
+  </div>
+
+  <p id="counter"></p>
+
+  <table>
+    <tr>
+       
+        <th id="id">ID</th>
+      <th id="name">Product</th>
+      <th id="continent">Category</th>
+      <th id="price">price</th>
+    </tr>
+      <tbody id="products">
+      </tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>
